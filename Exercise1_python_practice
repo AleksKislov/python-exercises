@@ -1,0 +1,9 @@
+import datetime
+
+input("what's your name?: ")
+a = input("How old are you: ")
+#current year - your age + 100 years
+year100 = int(datetime.date.today().strftime("%Y")) - int(a) + 100
+x = input("Enter random number please： ")
+#taking random number and print it so many times in console
+print(("The year when you turn 100: " + str(year100) + "\n") * int(x))
