@@ -1,0 +1,6 @@
+for i in range(99, 0, -1):
+ print(str(i) + " bottles of beer on the wall, " + str(i) + " bootles of beer.")
+ print("Take one down and pass it around, " + str(i-1) + "bottles of beer on the wall.\n")
+ if i == 1:
+  print(str(i) + " bottle of beer on the wall, " + str(i) + " bootle of beer.")
+  print("Take one down and pass it around, no bottles of beer on the wall.\n")
