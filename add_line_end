@@ -1,0 +1,8 @@
+# This Python file uses the following encoding: utf-8
+import sys, re
+
+
+with open("test.txt", "r") as myfile:
+    fil = myfile.read().rstrip('\n')
+with open("output.txt", "w") as f:
+    f.write(re.sub(r'(?m)$', r'</br>', fil))
