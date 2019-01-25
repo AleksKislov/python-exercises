@@ -1,0 +1,8 @@
+import sys
+dict = [
+   ('утро', 'вечер'),
+   ('привет', 'пока')
+ ]
+s=open(sys.argv[1],'r').read()
+for r in dict: s=s.replace(r[0],r[1])
+open(sys.argv[2],'w').write(s)
