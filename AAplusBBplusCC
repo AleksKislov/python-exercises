@@ -1,0 +1,21 @@
+# list of possible numbers
+numbers = []
+
+for x in range(1,10):
+ numbers.append(x*11)
+
+print(numbers)
+
+res = []
+
+for aa in numbers:
+ for bb in numbers:
+  for cc in numbers:
+   abc = aa + bb + cc
+   if abc // 100 == aa/11:
+    if aa != bb and bb != cc and cc != aa:
+     if (abc % 100) // 10 == bb/11:
+      if (abc % 100) % 10 == cc/11:
+       res.append(abc)
+
+print(res)
