@@ -1,0 +1,20 @@
+# list of possible numbers
+numbers = []
+
+for x in range(1,10):
+ numbers.append(x*111)
+
+res = []
+
+for aaa in numbers:
+ for bbb in numbers:
+  for ccc in numbers:
+   baac = aaa + bbb + ccc
+   if baac // 1000 == bbb/111:
+    if aaa != bbb and bbb != ccc and ccc != aaa:
+     if (baac % 1000) // 100 == aaa/111:
+      if ((baac % 1000) % 100) // 10 == aaa/111:
+       if ((baac % 1000) % 100) % 10 == ccc/111:
+        res.append(baac)
+
+print(res)
