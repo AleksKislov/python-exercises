@@ -1,0 +1,30 @@
+#  西湖美  xhm
+#  美呀美  mym
+#西湖美呀 xhmy
+
+numbers = []
+for i in range(0,10):
+ numbers.append(i)
+ 
+print(numbers)
+
+xhmy = 0
+xhm = 0
+mym = 0
+res = []
+
+for x in numbers:
+ for h in numbers:
+  for m in numbers:
+   for y in numbers:
+    xhm = (x * 100 + h * 10 + m)
+    mym = (m * 100 + y * 10 + m)
+    xhmy = xhm + mym
+    if x != h and x != m and x != y and h != m and h != y and m != y:
+     if xhmy // 1000 == x:
+      if (xhmy % 1000) // 100 == h:
+       if (xhmy % 100) // 10 == m:
+        if (xhmy % 10) == y:
+         res.append(xhmy)
+         
+print(res)
