@@ -1,0 +1,38 @@
+#     abc
+#    * dc
+#   figaa 
+
+# list of possible numbers
+numbers = []
+
+for x in range(0,10):
+ numbers.append(x)
+
+res = []
+abc_res = []
+dc_res = []
+
+for a in numbers:
+ for b in numbers:
+  for c in numbers:
+   for d in numbers:
+    for i in numbers:
+     for f in numbers:
+      for g in numbers:
+       abc = a*100 + b*10 + c
+       dc = d*10 + c
+       figaa = abc * dc
+       if a != b and a != c and a != d and a != f and a != i and a != g and b != c and b != d and b != i and b != f and b != g:
+        if c != d and c != f and c != g and c != i and d != f and d != i and d !=  g and i != f and i != g:
+         if figaa // 10000 == f:
+          if (figaa % 10000) // 1000 == i:
+           if (figaa % 1000) // 100 == g:
+            if (figaa % 100) // 10 == a:
+             if figaa % 10 == a:
+              res.append(figaa)
+              abc_res.append(abc)
+              dc_res.append(dc)
+
+print(res)
+print(abc_res)
+print(dc_res)
